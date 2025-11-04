@@ -1,0 +1,207 @@
+.main-content {
+  text-align: center;
+}
+
+.algorithm-finder-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .accordion {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px 24px;
+    margin: 20px 35px;
+    margin-top: 40px;
+
+    .question-value {
+      margin: 0;
+      transition: text-decoration 0.2s ease;
+      font-size: 70px; 
+
+      &:hover {
+        text-decoration: underline;
+      }
+      // changed media queries 
+      @media (min-width: 576px) {
+        font-size: 50px;
+      }
+      @media (min-width: 768px) {
+        font-size: 60px;
+      }
+      @media (min-width: 992px) {
+        font-size: 70px;
+      }
+      // @media (min-width: 1200px) {
+      //   font-size: 80px;
+      // }
+    
+      @media screen and (max-width: 425px) {
+
+        font-size: 40px;
+      }
+    
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding-top: 10px; 
+
+      &.open {
+        max-height: 300px;
+      }
+
+      .question-summary {
+        padding: 8px 0 0 0;
+        color: #333;
+        // added font size
+        font-size: x-large;
+        @media (max-width: 600px) {
+          font-size: medium;
+        }
+      }
+    }
+  }
+
+  .action-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    @media (max-width:600px) {
+      flex-direction: column;
+    }
+  }
+
+  .btn-success, .btn-error {
+    background-color: white;
+    color: #4CAF50;
+    padding: 20px 50px;
+    font-size: 32px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+    @media (max-width:600px) {
+      width: 70%;
+    }
+  }
+
+  .btn-success {
+    background-color: #22c55e;
+    color: white;
+  }
+
+  .btn-error {
+    background-color: #dc2626;
+    color: white;
+  }
+
+  .btn-success:hover, .btn-error:hover {
+    color: inherit;
+    border: 2px solid;
+  }
+
+  .btn-success:hover {
+    background-color:#4ade80;
+    border-color: #4ade80;
+    color: #ffffff;
+  }
+
+  .btn-error:hover {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    color: #ffffff;
+  }
+
+  .btn-success:active, .btn-error:active {
+    transform: scale(0.95);
+  }
+
+  .btn-success:disabled, .btn-error:disabled {
+    background-color: #ddd;
+    color: #999;
+    border-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .btn-back, .btn-restart {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 36px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: block;
+    margin: auto auto;
+    margin-top: 40px;
+  }
+
+  .btn-back:hover, .btn-restart:hover {
+    background-color: #333;
+  }
+
+  .btn-back:active, .btn-restart:active {
+    background-color: #555;
+    transform: scale(0.98);
+  }
+
+  
+  @media (max-width: 1200px) {
+    .accordion {
+      margin: 20px 20px; 
+    }
+
+    
+
+    .btn-success, .btn-error {
+      padding: 15px 40px; 
+      font-size: 28px; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .accordion {
+      margin: 15px 10px; 
+    }
+
+    
+    .btn-success, .btn-error {
+      padding: 10px 30px; 
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .accordion {
+      margin: 10px 5px; 
+    }
+
+    
+
+    .btn-success, .btn-error {
+      padding: 8px 20px; 
+      font-size: 20px;
+    }
+
+    .btn-back, .btn-restart {
+      font-size: 14px; 
+      padding: 8px 24px;
+      height: 50px;
+    }
+  }
+}
